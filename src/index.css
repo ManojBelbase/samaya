@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.half-border-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  /* transform: translateX(-50%); */
+  width: 4%;
+  border-bottom: 3px solid rgb(58, 58, 224);
+}

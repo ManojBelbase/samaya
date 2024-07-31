@@ -4,10 +4,10 @@ import searchIcon from "../../assets/searchIcon.png";
 
 const HomePage = () => {
   return (
-    <div className="h-lvh bg-gradient-to-t from-black to-gray-900 px-6 pt-3 text-white md:px-20 md:pt-8">
+    <div className="bg-gradient-to-b from-gray-950 to-gray-900 px-6 py-3 text-white md:px-20 md:py-16">
       <div className="mx-auto grid max-w-screen-xl grid-cols-1 place-items-center gap-4 sm:grid-cols-2">
         <div className="left flex flex-col gap-4 sm:gap-8">
-          <h1 className="text-3xl font-extrabold leading-tight sm:text-6xl">
+          <h1 className="text-3xl font-extrabold sm:text-6xl md:leading-tight">
             Discover <br /> Most Suitable <br />
             Watches
           </h1>

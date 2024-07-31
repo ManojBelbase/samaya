@@ -7,15 +7,26 @@ import ShoppingCart from "../../assets/ShoppingCart.png";
 import { VscThreeBars } from "react-icons/vsc";
 const Header = () => {
   const [ishovered, setIsHovered] = useState(false);
+  // it for contact us page
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="flex items-center justify-between bg-black px-4 py-4 text-white md:px-20">
-      <div className="text-2xl font-medium sm:font-semibold">Samaya.</div>
+    <nav className="h-18 flex items-center justify-between bg-black px-4 py-2 text-white md:px-20">
+      <div className="flex items-center gap-2 text-2xl font-medium sm:font-semibold">
+        <video
+          src="https://i.gifer.com/152H.mp4"
+          autoPlay
+          muted
+          loop
+          className="h-14 rounded-full border border-white object-cover"
+        />
+        <p>Samaya.</p>
+      </div>
       <ul className="hidden gap-4 font-normal text-gray-400 sm:flex md:gap-10 md:font-medium">
         <li>
           <NavLink
             to={"/"}
             className={({ isActive }) =>
-              isActive ? "border-b-2 text-gray-400" : ""
+              isActive ? "border-b-2 border-gray-400" : ""
             }
           >
             Home
@@ -29,7 +40,7 @@ const Header = () => {
           <NavLink
             to={"/brands"}
             className={({ isActive }) =>
-              isActive ? "border-b-2 text-gray-400" : ""
+              isActive ? "border-b-2 border-gray-400" : ""
             }
           >
             Brands
@@ -48,17 +59,17 @@ const Header = () => {
           <NavLink
             to={"/products"}
             className={({ isActive }) =>
-              isActive ? "border-b-2 text-gray-400" : ""
+              isActive ? "border-b-2 border-gray-400" : ""
             }
           >
             Products
           </NavLink>
         </li>
-        <li>
+        <li onClick={() => setIsOpen(true)}>
           <NavLink
             to={"/contact"}
             className={({ isActive }) =>
-              isActive ? "border-b-2 text-gray-400" : ""
+              isActive ? "border-b-2 border-gray-400" : ""
             }
           >
             Contact
@@ -68,7 +79,7 @@ const Header = () => {
           <NavLink
             to={"/about"}
             className={({ isActive }) =>
-              isActive ? "border-b-2 text-gray-400" : ""
+              isActive ? "border-b-2 border-gray-400" : ""
             }
           >
             About
