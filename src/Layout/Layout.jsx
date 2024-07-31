@@ -4,9 +4,9 @@ import { Outlet } from "react-router";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="">
       <Header />
-      <main className="px-4 md:px-10">
+      <main className="">
         <Outlet />
       </main>
     </div>
