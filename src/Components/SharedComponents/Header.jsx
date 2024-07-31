@@ -5,22 +5,35 @@ import search from "../../assets/Search.png";
 import Person from "../../assets/Person.png";
 import ShoppingCart from "../../assets/ShoppingCart.png";
 import { VscThreeBars } from "react-icons/vsc";
-
 const Header = () => {
   const [ishovered, setIsHovered] = useState(false);
   return (
-    <nav className="flex items-center justify-between bg-black px-4 py-3 text-white md:px-20">
+    <nav className="flex items-center justify-between bg-black px-4 py-4 text-white md:px-20">
       <div className="text-2xl font-medium sm:font-semibold">Samaya.</div>
       <ul className="hidden gap-4 font-normal text-gray-400 sm:flex md:gap-10 md:font-medium">
         <li>
-          <NavLink to={"/"}>Home</NavLink>
+          <NavLink
+            to={"/"}
+            className={({ isActive }) =>
+              isActive ? "border-b-2 text-gray-400" : ""
+            }
+          >
+            Home
+          </NavLink>
         </li>
         <li
           className="relative flex items-center"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <NavLink to={"/brands"}>Brands</NavLink>
+          <NavLink
+            to={"/brands"}
+            className={({ isActive }) =>
+              isActive ? "border-b-2 text-gray-400" : ""
+            }
+          >
+            Brands
+          </NavLink>
           <RiArrowDropDownLine className="cursor-pointer text-2xl" />
           <ul
             className={`absolute left-3 top-7 rounded-md bg-black px-3 py-3 shadow shadow-white ${ishovered ? "block" : "hidden"}`}
@@ -28,16 +41,38 @@ const Header = () => {
             <li className="cursor-pointer">Apple</li>
             <li className="cursor-pointer">Samsung</li>
             <li className="cursor-pointer">Xiaomi</li>
+            <li className="cursor-pointer">Rolex</li>
           </ul>
         </li>
         <li>
-          <NavLink to={"/products"}>Products</NavLink>
+          <NavLink
+            to={"/products"}
+            className={({ isActive }) =>
+              isActive ? "border-b-2 text-gray-400" : ""
+            }
+          >
+            Products
+          </NavLink>
         </li>
         <li>
-          <NavLink to={"/contact"}>Contact</NavLink>
+          <NavLink
+            to={"/contact"}
+            className={({ isActive }) =>
+              isActive ? "border-b-2 text-gray-400" : ""
+            }
+          >
+            Contact
+          </NavLink>
         </li>
         <li>
-          <NavLink to={"/about"}>About</NavLink>
+          <NavLink
+            to={"/about"}
+            className={({ isActive }) =>
+              isActive ? "border-b-2 text-gray-400" : ""
+            }
+          >
+            About
+          </NavLink>
         </li>
       </ul>
       <div className="hidden gap-3 sm:flex">
