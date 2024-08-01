@@ -9,7 +9,7 @@ const Model = ({ isOpen, setIsOpen, popupheader, popupfooter, children }) => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-w-[500px] grow rounded-lg border bg-black p-4 text-white shadow-lg"
+        className="max-w-[500px] grow rounded-lg border bg-black p-10 text-white shadow-lg"
       >
         {popupheader}
         {/*<model>{children} </model>  */}

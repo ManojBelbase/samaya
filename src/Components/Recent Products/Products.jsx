@@ -32,7 +32,7 @@ const Products = () => {
                   <p> {elem.discount}%</p>
                 </div>
                 <div
-                  className={`absolute right-1 top-1 flex flex-col gap-2 ${hoverItemId === elem.id ? "block" : "hidden"}`}
+                  className={`absolute right-1 top-0 flex flex-col gap-2 ${hoverItemId === elem.id ? "block" : "hidden"}`}
                 >
                   <img src={AddtoCart} alt="" className="w-[70%]" />
                   <img src={wishList} alt="" className="w-[70%]" />

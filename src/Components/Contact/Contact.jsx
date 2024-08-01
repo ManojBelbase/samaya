@@ -8,8 +8,8 @@ const Contact = () => {
       <h1 className="py-7 text-center text-2xl font-bold md:text-8xl">
         Contact Us
       </h1>
-      <div className="grid place-items-center gap-10 px-2 md:grid-cols-2 md:px-6 md:py-8">
-        <div className="flex min-h-72 flex-col gap-10 rounded-md border px-4 py-6 md:px-12">
+      <div className="grid place-items-center gap-10 px-2 md:grid-cols-2 md:gap-20 md:px-6 md:py-8">
+        <div className="flex min-h-72 flex-col gap-10 rounded-md border px-5 py-6 md:px-20">
           <p className="text-center text-3xl font-bold">
             Talk to a member of our Sales Team
           </p>

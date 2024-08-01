@@ -7,8 +7,7 @@ import ShoppingCart from "../../assets/ShoppingCart.png";
 import { VscThreeBars } from "react-icons/vsc";
 const Header = () => {
   const [ishovered, setIsHovered] = useState(false);
-  // it for contact us page
-  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="h-18 flex items-center justify-between bg-black px-4 py-2 text-white md:px-20">
       <div className="flex items-center gap-2 text-2xl font-medium sm:font-semibold">
@@ -47,7 +46,7 @@ const Header = () => {
           </NavLink>
           <RiArrowDropDownLine className="cursor-pointer text-2xl" />
           <ul
-            className={`absolute left-3 top-7 rounded-md bg-black px-3 py-3 shadow shadow-white ${ishovered ? "block" : "hidden"}`}
+            className={`absolute left-2 top-6 rounded-md bg-black px-3 py-3 shadow shadow-white ${ishovered ? "block" : "hidden"}`}
           >
             <li className="cursor-pointer">Apple</li>
             <li className="cursor-pointer">Samsung</li>
@@ -65,7 +64,7 @@ const Header = () => {
             Products
           </NavLink>
         </li>
-        <li onClick={() => setIsOpen(true)}>
+        <li>
           <NavLink
             to={"/contact"}
             className={({ isActive }) =>
