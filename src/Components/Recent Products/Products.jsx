@@ -5,15 +5,15 @@ import ProducuData from "../../data/ProducuData";
 const Products = () => {
   const [hoverItemId, setHoverItemId] = useState(null);
   return (
-    <div className="bg-gradient-to-b from-black to-gray-900 sm:px-20">
+    <div className="bg-gradient-to-b from-black to-gray-900 px-10 sm:px-20">
       <h1 className="half-border-bottom relative pb-1 pt-4 text-2xl font-bold text-white">
         Our Latest Products
       </h1>
-      <div className="grid gap-5 px-10 py-4 text-white sm:grid-cols-2 md:px-0 lg:grid-cols-4">
+      <div className="grid gap-5 py-4 text-white sm:grid-cols-2 md:px-0 lg:grid-cols-4">
         {ProducuData.map((elem) => {
           return (
             <div
-              className="relative max-h-80 w-60 cursor-pointer rounded-md border hover:scale-[1.01]"
+              className="relative max-h-80 max-w-72 cursor-pointer rounded-md border hover:scale-[1.01]"
               key={elem.id}
               onMouseEnter={() => setHoverItemId(elem.id)}
               onMouseLeave={() => setHoverItemId(null)}

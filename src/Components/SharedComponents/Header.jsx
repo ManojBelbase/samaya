@@ -5,22 +5,30 @@ import search from "../../assets/Search.png";
 import Person from "../../assets/Person.png";
 import ShoppingCart from "../../assets/ShoppingCart.png";
 import { VscThreeBars } from "react-icons/vsc";
+import { IoMdClose } from "react-icons/io";
+
 const Header = () => {
   const [ishovered, setIsHovered] = useState(false);
-
+  const [sidebar, setSidebar] = useState(false);
   return (
-    <nav className="h-18 flex items-center justify-between bg-black px-4 py-2 text-white md:px-20">
-      <div className="flex items-center gap-2 text-2xl font-medium sm:font-semibold">
+    <nav className="h-18 flex items-center justify-between bg-black px-4 py-2 text-white md:px-16">
+      <div className="flex items-center gap-2 text-xl font-medium md:font-semibold">
         <video
           src="https://i.gifer.com/152H.mp4"
           autoPlay
           muted
           loop
-          className="h-14 rounded-full border border-white object-cover"
+          className="h-10 rounded-full border border-white object-cover md:h-14"
         />
         <p>Samaya.</p>
       </div>
-      <ul className="hidden gap-4 font-normal text-gray-400 sm:flex md:gap-10 md:font-medium">
+      <ul
+        className={` ${sidebar ? "fixed right-0 top-0 z-50 block h-lvh w-[200px] px-4 py-6 leading-10 text-black shadow-sm backdrop-blur-sm" : "hidden"} gap-4 font-normal text-gray-400 md:flex md:gap-4 md:font-medium lg:gap-10`}
+      >
+        {/* sidebar close icon  */}
+        <div className="sm:hidden" onClick={() => setSidebar(!sidebar)}>
+          <IoMdClose className="text-4xl" />
+        </div>
         <li>
           <NavLink
             to={"/"}
@@ -85,13 +93,13 @@ const Header = () => {
           </NavLink>
         </li>
       </ul>
-      <div className="hidden gap-3 sm:flex">
+      <div className="hidden gap-4 sm:flex">
         <img src={search} alt="search" className="cursor-pointer" />
         <img src={Person} alt="person" className="cursor-pointer" />
         <img src={ShoppingCart} alt="shopping" className="cursor-pointer" />
       </div>
-      <div className="sm:hidden">
-        <VscThreeBars />
+      <div className="sm:hidden" onClick={() => setSidebar(!sidebar)}>
+        <VscThreeBars className="text-4xl" />
       </div>
     </nav>
   );
