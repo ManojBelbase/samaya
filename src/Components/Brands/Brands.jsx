@@ -22,44 +22,46 @@ const BrandData = [
     img: "https://images.pexels.com/photos/24509606/pexels-photo-24509606/free-photo-of-close-up-of-a-rolex-in-a-womans-hands.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     name: "Rolex",
     description:
-      "Rolex smartwatches excel in precision and elegance, offering unparalleled luxury combined with advanced health and fitness features.",
+      "Rolex smart watches excel in precision and elegance, offering unparalleled luxury combined with advanced health and fitness features.",
   },
   {
     img: "https://images.pexels.com/photos/24509606/pexels-photo-24509606/free-photo-of-close-up-of-a-rolex-in-a-womans-hands.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     name: "Samsung",
     description:
-      "Samsung smartwatches excel in precision and elegance, offering unparalleled luxury combined with advanced health and fitness features.",
+      "Samsung smart watches excel in precision and elegance, offering unparalleled luxury combined with advanced health and fitness features.",
   },
   {
     img: "https://m.media-amazon.com/images/I/716+0qoy3HL._AC_UF894,1000_QL80_.jpg",
     name: "Garmin",
     description:
-      "Garmin smartwatches excel in precision and elegance, offering unparalleled luxury combined with advanced health and fitness features.",
+      "Garmin smart watches excel in precision and elegance, offering unparalleled luxury combined with advanced health and fitness features.",
   },
 ];
 const Brands = () => {
   return (
-    <div className="bg-gradient-to-b from-black to-gray-900 px-8 text-white sm:px-20">
+    <div className="bg-gradient-to-b from-black to-gray-900 px-4 text-white sm:px-20 md:px-8">
       <h1 className="half-border-bottom relative pb-1 pt-4 text-2xl font-bold text-white">
         Brands
       </h1>
-      <div className="grid gap-3 py-3 sm:grid-cols-2 md:h-screen md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-1 py-3 md:h-screen md:grid-cols-3 md:gap-3">
         {BrandData.map((elme) => {
           return (
             <div
-              className="grid max-h-64 max-w-80 cursor-pointer grid-cols-2 place-items-center gap-4 rounded-md border bg-gray-900 px-3 py-5"
+              className="grid max-h-64 max-w-80 cursor-pointer grid-cols-2 place-items-center gap-1 rounded-md border bg-gray-900 px-1 py-5 md:gap-4 md:px-3"
               key={elme.name}
             >
-              <div className="h-40 overflow-hidden">
+              <div className="h-32 overflow-hidden md:h-40">
                 <img
                   src={elme.img}
                   alt=""
                   className="h-full w-full rounded-md object-cover"
                 />
               </div>
-              <div className="flex flex-col justify-center gap-3">
-                <h1 className="text-2xl font-bold">{elme.name}</h1>
-                <p className="line-clamp-5 text-sm font-thin text-gray-400">
+              <div className="flex flex-col justify-center gap-3 px-1">
+                <h1 className="overflow-hidden text-base font-bold md:text-2xl">
+                  {elme.name}
+                </h1>
+                <p className="line-clamp-4 text-xs font-thin text-gray-400 md:line-clamp-5 md:text-sm">
                   {elme.description}
                 </p>
               </div>

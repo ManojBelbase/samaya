@@ -23,7 +23,7 @@ const Header = () => {
         <p>Samaya.</p>
       </div>
       <ul
-        className={` ${sidebar ? "fixed right-0 top-0 z-50 block h-lvh w-[200px] px-4 py-6 leading-10 text-black shadow-sm backdrop-blur-sm" : "hidden"} gap-4 font-normal text-gray-400 md:flex md:gap-4 md:font-medium lg:gap-10`}
+        className={` ${sidebar ? "fixed right-0 top-0 z-50 block h-lvh w-[200px] px-4 py-6 leading-10 text-black shadow-sm backdrop-blur-md" : "hidden"} gap-4 font-normal text-gray-400 md:flex md:gap-4 md:font-medium lg:gap-10`}
       >
         {/* sidebar close icon  */}
         <div className="sm:hidden" onClick={() => setSidebar(!sidebar)}>

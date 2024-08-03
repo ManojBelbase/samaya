@@ -32,7 +32,11 @@ const HomePage = () => {
           </div>
         </div>
         <div className="right">
-          <img src={HeroImage} alt="heroimage" className="w-[80%] sm:w-[90%]" />
+          <img
+            src={HeroImage}
+            alt="heroimage"
+            className="w-[70%] text-center sm:w-[90%]"
+          />
         </div>
       </div>
     </div>
