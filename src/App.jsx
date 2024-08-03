@@ -7,6 +7,7 @@ import Brands from "./Components/Brands/Brands";
 import Products from "./Components/Recent Products/Products";
 import Contact from "./Components/Contact/Contact";
 import SingleProduct from "./Components/Recent Products/SingleProduct";
+import SingleBrandProduct from "./Components/Brands/SingleBrandProduct";
 function App() {
   return (
     <>
@@ -15,6 +16,8 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="brands" element={<Brands />} />
+            <Route path="brand/:brand" element={<SingleBrandProduct />} />
+
             <Route path="products" element={<Products />} />
             <Route path="product/:id" element={<SingleProduct />} />
             <Route path="contact" element={<Contact />} />

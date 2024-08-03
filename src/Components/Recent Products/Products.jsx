@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AddtoCart from "../../assets/Addtocart.png";
 import wishList from "../../assets/wishlist.png";
-import ProducuData from "../../data/ProducuData";
+import ProducuData from "../../data/ProducutData";
 import { Link } from "react-router-dom";
 const Products = () => {
   const [hoverItemId, setHoverItemId] = useState(null);
