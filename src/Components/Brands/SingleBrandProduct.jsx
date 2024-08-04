@@ -3,16 +3,17 @@ import { useParams } from "react-router";
 import ProductData from "../../data/ProducutData";
 
 const SingleBrandProduct = () => {
-  const { brand } = useParams(); // id will be the brand name in this case
-  console.log(brand);
-  // Find all products of the selected brand
+  const { brand } = useParams();
+
   const brandProducts = ProductData.filter(
-    (product) => product.brand === brand,
+    (product) => product.brand.brandName === brand,
   );
 
   return (
     <div className="bg-gradient-to-b from-black to-gray-900 px-4 py-5 text-white sm:px-20 md:px-8">
-      <h1 className="mb-4 text-2xl font-bold text-white">{brand} Products</h1>
+      <h1 className="half-border-bottom mb-4 text-2xl font-bold text-white">
+        {brand} Watches
+      </h1>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
         {brandProducts.map((product) => (
           <div className="rounded-md border bg-gray-900 p-3" key={product.id}>

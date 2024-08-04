@@ -14,7 +14,7 @@ const Products = () => {
         {ProducuData.map((elem) => {
           return (
             <div
-              className="relative max-h-80 max-w-72 cursor-pointer rounded-md border hover:scale-[1.01]"
+              className="relative max-h-80 max-w-72 cursor-pointer rounded-md border grayscale hover:scale-[1.01] hover:grayscale-0"
               key={elem.id}
               onMouseEnter={() => setHoverItemId(elem.id)}
               onMouseLeave={() => setHoverItemId(null)}
